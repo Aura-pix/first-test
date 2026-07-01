@@ -10,6 +10,10 @@ body {
   /* width: 600px; */
   padding: 5px;
 }
+/* .body {
+  display: flex;
+  justify-content: center;
+} */
 h2 {
   margin: 10px 5px;
   font-size: 30px;
@@ -76,18 +80,21 @@ h3 {
   color: #c9a227;
   font-size: 20px;
 }
-hr {
-  width: 100%;
-}
+
 img {
   margin: 5px;
 }
 footer {
   border-top: 2px solid;
+  color: #c9a227;
 }
 h4 {
   margin-left: 10px;
 }
 .brand {
   font-size: small;
+}
+.aside {
+  border-top: 2px solid;
+  color: #c9a227;
 }
