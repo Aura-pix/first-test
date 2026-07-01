@@ -85,8 +85,7 @@ img {
   margin: 5px;
 }
 footer {
-  border-top: 2px solid;
-  color: #c9a227;
+  border-top: 2px solid #c9a227;
 }
 h4 {
   margin-left: 10px;
@@ -95,6 +94,5 @@ h4 {
   font-size: small;
 }
 .aside {
-  border-top: 2px solid;
-  color: #c9a227;
+  border-top: 2px solid #c9a227;
 }
