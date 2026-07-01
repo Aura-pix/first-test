@@ -3,9 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <meta
+      name="description"
+      content="Enroll in the Mount Zion Film Academy Phone Cinematography & Content Creation Masterclass."
+    />
+    <title>Enroll — Mount Zion Film Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
   </head>
   <body>
-    <h2>Coming soon...</h2>
+    <header class="hero hero--compact">
+      <a href="index.html" class="back-link">&larr; Back to course details</a>
+      <h1 class="form-title">Enroll Now</h1>
+      <p class="eyebrow">Phone Cinematography &amp; Content Creation Masterclass</p>
+      <p class="date">July 13th – 18th, 2026 &middot; 5pm Nigeria time, daily &middot; Fully online</p>
+    </header>
+
+    <main class="section form-shell">
+      <div class="notice">
+        <p><strong>Cost:</strong> ₦50,000 NGN, $50 USD, or €50 EUR</p>
+        <p>
+          Payment made to any account other than the ones listed below is
+          not recognized and won't be refunded. The same applies to
+          incomplete payment.
+        </p>
+      </div>
+
+      <form id="enroll-form" novalidate>
+        <div class="field">
+          <label for="name">Name (as it will appear on your certificate)</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error" data-error-for="name"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error" data-error-for="email"></span>
+        </div>
+
+        <div class="field">
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" required />
+          <span class="error" data-error-for="dob"></span>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number (preferably WhatsApp)</label>
+          <input type="tel" id="phone" name="phone" required />
+          <span class="error" data-error-for="phone"></span>
+        </div>
+
+        <div class="field">
+          <label for="country">Country</label>
+          <input type="text" id="country" name="country" required />
+          <span class="error" data-error-for="country"></span>
+        </div>
+
+        <fieldset class="field">
+          <legend>Rate your current video editing experience</legend>
+          <p class="hint">
+            1 – No experience &nbsp;·&nbsp; 2 – Beginner &nbsp;·&nbsp;
+            3 – Intermediate &nbsp;·&nbsp; 4 – Advanced (comfortable with
+            Premiere Pro, Final Cut, or DaVinci Resolve) &nbsp;·&nbsp;
+            5 – Professional
+          </p>
+          <div class="radio-row">
+            <label><input type="radio" name="experience" value="1" required /> 1</label>
+            <label><input type="radio" name="experience" value="2" /> 2</label>
+            <label><input type="radio" name="experience" value="3" /> 3</label>
+            <label><input type="radio" name="experience" value="4" /> 4</label>
+            <label><input type="radio" name="experience" value="5" /> 5</label>
+          </div>
+          <span class="error" data-error-for="experience"></span>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Payment method</legend>
+          <div class="payment-option">
+            <label>
+              <input type="radio" name="payment_method" value="PayPal" required />
+              PayPal ($)
+            </label>
+            <div class="payment-detail" data-detail-for="PayPal">
+              www.PayPal.Me/joshuamikeb
+            </div>
+          </div>
+          <div class="payment-option">
+            <label>
+              <input type="radio" name="payment_method" value="Zelle" />
+              Zelle ($)
+            </label>
+            <div class="payment-detail" data-detail-for="Zelle">
+              jmikebamiloye@gmail.com
+            </div>
+          </div>
+          <div class="payment-option">
+            <label>
+              <input type="radio" name="payment_method" value="Zenith Bank" />
+              Zenith Bank (₦)
+            </label>
+            <div class="payment-detail" data-detail-for="Zenith Bank">
+              Mount Zion Film Production — 1225158440
+            </div>
+          </div>
+          <div class="payment-option">
+            <label>
+              <input type="radio" name="payment_method" value="Selar" />
+              Selar (card or bank transfer, any currency)
+            </label>
+            <div class="payment-detail" data-detail-for="Selar">
+              <a href="https://selar.com/729f67277u" target="_blank" rel="noopener">
+                selar.com/729f67277u
+              </a>
+              — select transfer, or pay by card
+            </div>
+          </div>
+          <div class="payment-option">
+            <label>
+              <input type="radio" name="payment_method" value="Other" />
+              Other
+            </label>
+            <input
+              type="text"
+              class="payment-other-input"
+              name="payment_method_other"
+              placeholder="Describe how you paid"
+            />
+          </div>
+          <span class="error" data-error-for="payment_method"></span>
+        </fieldset>
+
+        <div class="field">
+          <label for="proof">Proof of payment</label>
+          <p class="hint">
+            Attach a screenshot or receipt when your email opens. Max 10MB.
+          </p>
+          <input type="file" id="proof" name="proof" accept="image/*,.pdf" required />
+          <span class="error" data-error-for="proof"></span>
+        </div>
+
+        <div class="field">
+          <label for="comment">Comment or question</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+          <span class="error" data-error-for="comment"></span>
+        </div>
+
+        <button type="submit" class="button">Send Enrollment</button>
+        <p class="hint hint--footer">
+          This opens your email app with your details pre-filled — just
+          attach your payment proof and hit send. Prefer email directly?
+          Write to
+          <a href="mailto:mountzionfilmacademy@gmail.com">mountzionfilmacademy@gmail.com</a>
+          or call <a href="tel:+2347045562683">+234 704 556 2683</a>.
+        </p>
+        <p class="hint">
+          If you don't receive a confirmation within 3 working days, please
+          reach out using the contacts above.
+        </p>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p class="brand">Made by 0xAurora</p>
+    </footer>
+
+    <script>
+      (function () {
+        const form = document.getElementById("enroll-form");
+        const paymentDetails = document.querySelectorAll(".payment-detail");
+        const paymentRadios = document.querySelectorAll(
+          'input[name="payment_method"]'
+        );
+
+        // Show only the selected payment method's account details
+        function updatePaymentDetails() {
+          const selected = document.querySelector(
+            'input[name="payment_method"]:checked'
+          );
+          paymentDetails.forEach((el) => {
+            el.classList.toggle(
+              "is-visible",
+              !!selected && el.dataset.detailFor === selected.value
+            );
+          });
+        }
+        paymentRadios.forEach((radio) =>
+          radio.addEventListener("change", updatePaymentDetails)
+        );
+
+        function setError(fieldName, message) {
+          const el = form.querySelector(`[data-error-for="${fieldName}"]`);
+          if (el) el.textContent = message || "";
+        }
+
+        function clearAllErrors() {
+          form
+            .querySelectorAll(".error")
+            .forEach((el) => (el.textContent = ""));
+        }
+
+        function validate() {
+          clearAllErrors();
+          let isValid = true;
+
+          const requiredTextFields = [
+            "name",
+            "email",
+            "dob",
+            "phone",
+            "country",
+            "comment",
+          ];
+          requiredTextFields.forEach((fieldName) => {
+            const field = form.elements[fieldName];
+            if (!field.value.trim()) {
+              setError(fieldName, "This field is required.");
+              isValid = false;
+            }
+          });
+
+          const email = form.elements["email"];
+          if (
+            email.value.trim() &&
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())
+          ) {
+            setError("email", "Enter a valid email address.");
+            isValid = false;
+          }
+
+          if (!form.querySelector('input[name="experience"]:checked')) {
+            setError("experience", "Please select your experience level.");
+            isValid = false;
+          }
+
+          if (!form.querySelector('input[name="payment_method"]:checked')) {
+            setError("payment_method", "Please select a payment method.");
+            isValid = false;
+          }
+
+          const proof = form.elements["proof"];
+          if (!proof.files.length) {
+            setError("proof", "Please select a file to attach.");
+            isValid = false;
+          } else if (proof.files[0].size > 10 * 1024 * 1024) {
+            setError("proof", "File must be under 10MB.");
+            isValid = false;
+          }
+
+          return isValid;
+        }
+
+        function buildMailtoLink() {
+          const selectedPayment = form.querySelector(
+            'input[name="payment_method"]:checked'
+          );
+          const paymentValue = selectedPayment
+            ? selectedPayment.value === "Other"
+              ? form.elements["payment_method_other"].value || "Other"
+              : selectedPayment.value
+            : "";
+          const experience = form.querySelector(
+            'input[name="experience"]:checked'
+          );
+
+          const lines = [
+            `Name: ${form.elements["name"].value}`,
+            `Email: ${form.elements["email"].value}`,
+            `Date of birth: ${form.elements["dob"].value}`,
+            `Phone: ${form.elements["phone"].value}`,
+            `Country: ${form.elements["country"].value}`,
+            `Video editing experience: ${experience ? experience.value : ""}`,
+            `Payment method: ${paymentValue}`,
+            `Comment/Question: ${form.elements["comment"].value}`,
+            "",
+            "(Proof of payment attached separately)",
+          ];
+
+          const subject = encodeURIComponent(
+            "Masterclass Enrollment — " + form.elements["name"].value
+          );
+          const body = encodeURIComponent(lines.join("\n"));
+          return `mailto:mountzionfilmacademy@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (!validate()) return;
+          window.location.href = buildMailtoLink();
+        });
+      })();
+    </script>
   </body>
 </html>
